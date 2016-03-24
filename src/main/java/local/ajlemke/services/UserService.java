@@ -18,7 +18,10 @@ public interface UserService {
     void update(User user);
     void delete(long id);
 
-    List<User> list();
+    static List<User> list() {
+        // TODO Auto-generated method stub
+        return null;
+    }
     List<User> list( String term );
     
     boolean doesExist(User user);

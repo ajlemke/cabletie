@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 /**
  * @author AJ Lemke
  *
@@ -26,7 +25,7 @@ public class User {
     private String country;
     private String locale;
     private String password;
- 
+
     public User(long id, String firstname, String lastname, String username, String email, String address, String city,
             String state, String country, String locale, String password) {
         this.id = id;
@@ -44,6 +43,7 @@ public class User {
     
     User() { // jpa only
     }
+
     /**
      * @return the id
      */

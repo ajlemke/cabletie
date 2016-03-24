@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import local.ajlemke.models.User;
+import local.ajlemke.services.UserService;
 
 /**
  * @author AJ Lemke
@@ -25,8 +26,9 @@ public class UserController {
      * 
      */
     @RequestMapping(value = "/user", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public ResponseEntity<List<User>> list() {
-        return null;
+    public List<User> list() {
+        List<User> users = UserService.list();
+        return users;
     }
 
     /**
